@@ -6,6 +6,8 @@ define ( 'SITE_URL', 'http://' . $_SERVER['HTTP_HOST'] . $site_url );
 
 include SITE_PATH . '/includes/Db.php';
 
+include SITE_PATH . '/includes/components/CommonController.php';
+
 
 $page = (isset($_GET['page'])) ? $_GET['page'] : 'articles';
 
@@ -22,7 +24,7 @@ $view = $ctrl->get_view();
 $datas = $ctrl->get_datas();
 
 
-echo '<pre>', var_dump($datas), '</pre>';
+//echo '<pre>', var_dump($datas), '</pre>';
 
 
 include SITE_PATH . '/view/page.php'; 
