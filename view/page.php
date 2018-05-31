@@ -3,19 +3,20 @@
     <head>
         <meta charset="UTF-8">
         <title>Articles</title>
-        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="<?php echo SITE_URL; ?>/css/style.css" />
     </head>
     <body>
         <div id="page">
             <main>
                 <nav>
-                    <ul>
-                        <li><a href="index.php?page=articles">Accueil</a></li>
-                        <li><a href="index.php?page=contact">Contact</a></li>
-                    </ul>
+                <?php Template::_includeModule('menus', ' ', ''); ?> 
                 </nav>
-                <?php include SITE_PATH . '/view/' . $view; ?>
+                <?php Template::_includeModule(Bootstrap::get_page(), Bootstrap::get_action(), Bootstrap::get_router()); ?>
             </main>
+            <footer>
+                <?php Template::_includeModule('menus', 'social', ''); ?>
+            
+            </footer>
         </div>
     </body>
 </html>

@@ -1,16 +1,22 @@
 <?php
+namespace includes\components;
+
 
 class CommonController {
     
     protected $_action;
+    protected $_routeur;
     protected $_view;
     protected $_datas = [];
     
-    public function __construct( $actionUrl) {
+    public function __construct( $actionUrl, $routeurUrl) {
         
         $this->_action = $actionUrl;
         
+        $this->_routeur = $routeurUrl;
+        
         $this->_process();
+
     }
     
     

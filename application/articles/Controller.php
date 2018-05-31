@@ -1,4 +1,9 @@
 <?php
+namespace application\articles;
+
+use includes\components\CommonController;
+use application\articles\ModelArticles;
+
 
 include_once SITE_PATH . '/application/articles/ModelArticles.php';
 
@@ -17,7 +22,7 @@ Class Controller extends CommonController{
 
         {
  
-            $this->_datas = $model_article ->article($_GET['id']);
+            $this->_datas = $model_article ->article($this->_routeur);
             $this->_view = 'articles/article_detail.php';
         }
         

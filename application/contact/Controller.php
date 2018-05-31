@@ -1,5 +1,8 @@
 <?php
+namespace application\contact;
 
+use includes\components\CommonController;
+use application\contact\ModelContact;
 
 class Controller extends CommonController {
     
@@ -9,6 +12,8 @@ class Controller extends CommonController {
         switch($this->_action){
             
             case 'send' :
+                
+            $this->_view = 'contact/contact_sent.php';   
             
             break;
         

@@ -1,5 +1,7 @@
 <?php
+namespace application\articles;
 
+use includes\Db; 
 
 class ModelArticles {
 
